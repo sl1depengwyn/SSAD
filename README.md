@@ -1,1 +1,3 @@
-# SSAD
+### Nataliya Sakovets, Dmitriy Pirozhenko, Nikita Pozdnyakov, Maxim Filonov
+
+#### This is a software system that incorporates various factors needed for smooth working and management of a hospital. This hospital management system allows administrator to store and manage various products and related data. This includes the beds/normal accommodation/ICU accommodation as well as patient data. In case a new patient arrives, the administrator may check for bed availability in various hospital departments and allocate it accordingly as per the patient's need. The system also stores the patient data in a well defined manner. The patient details include his name, number, address and various health parameters. The software system has a front end to design an interactive GUI and an Sql DBMS to store its back end data. This back end data includes accommodation details and even related patient data for effectively managing a hospital.
