@@ -1,5 +1,5 @@
 package SSAD;
 
 interface Status {
-  public String getStatus();
+    public String getStatus();
 }

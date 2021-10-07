@@ -2,26 +2,28 @@ package SSAD;
 
 import java.util.ArrayList;
 
-import SSAD.HealthRecord;
-import SSAD.OrganismParameters;
 
 public class HealthRecords {
-  private OrganismParameters organismParameters;
-  private ArrayList<HealthRecord> healthRecords = new ArrayList<HealthRecord>();
+    private OrganismParameters organismParameters;
+    private ArrayList<HealthRecord> healthRecords;
 
-  public OrganismParameters getOrganismParameters() {
-    return this.organismParameters;
-  }
+    public HealthRecords() {
+        healthRecords = new ArrayList<HealthRecord>();
+    }
 
-  public void setOrganismParameters(OrganismParameters organismParameters) {
-    this.organismParameters = organismParameters;
-  }
+    public OrganismParameters getOrganismParameters() {
+        return this.organismParameters;
+    }
 
-  public ArrayList<HealthRecord> getHealthRecords() {
-    return this.healthRecords;
-  }
+    public void setOrganismParameters(OrganismParameters organismParameters) {
+        this.organismParameters = organismParameters;
+    }
 
-  public void addRecord(HealthRecord healthRecord) {
-    this.healthRecords.add(healthRecord);
-  }
+    public ArrayList<HealthRecord> getHealthRecords() {
+        return this.healthRecords;
+    }
+
+    public void addRecord(HealthRecord healthRecord) {
+        this.healthRecords.add(healthRecord);
+    }
 }

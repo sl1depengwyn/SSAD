@@ -1,9 +1,9 @@
 package SSAD;
 
 public class Waiting implements Status {
-  private String status = "Waiting";
+    private String status = "Waiting";
 
-  public String getStatus() {
-    return this.status;
-  }
+    public String getStatus() {
+        return this.status;
+    }
 }

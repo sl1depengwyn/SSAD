@@ -2,7 +2,6 @@ package SSAD;
 
 import java.io.*;
 import java.util.*;
-import SSAD.Person;
 
 public class Main {
 
