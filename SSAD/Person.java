@@ -20,6 +20,8 @@ abstract class Person {
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("INSERT PEOPLE ...%s..%s...", firstName, lastName));
     }
 
     public String getFirstName() {
@@ -28,6 +30,8 @@ abstract class Person {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("UPDATE PEOPLE ...%s...", firstName));
     }
 
     public String getLastName() {
@@ -36,6 +40,8 @@ abstract class Person {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("UPDATE PEOPLE ...%s...", lastName));
     }
 
     public String getPhoneNumber() {
@@ -44,6 +50,8 @@ abstract class Person {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("UPDATE PEOPLE ...%s...", phoneNumber));
     }
 
     public Date getBirthDate() {
@@ -52,6 +60,8 @@ abstract class Person {
 
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("UPDATE PEOPLE ...%d...", birthDate.getTime()));
     }
 
     public Gender getGender() {
@@ -60,6 +70,8 @@ abstract class Person {
 
     public void setGender(Gender gender) {
         this.gender = gender;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("UPDATE PEOPLE ...%s...", gender.name()));
     }
 
     public Address getAddress() {
@@ -68,5 +80,7 @@ abstract class Person {
 
     public void setAddress(Address address) {
         this.address = address;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("UPDATE PEOPLE ...%s...%s...%s...%s...%s", address.getCity(), address.getCountry(), address.getPostalCode(), address.getStreet(), address.getState()));
     }
 }

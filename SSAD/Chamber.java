@@ -13,6 +13,8 @@ public class Chamber {
         this.department = department;
         this.roomNumber = roomNumber;
         this.id = id;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("INSERT CHAMBERS ...%d...", id));
     }
 
     public int getId() {
@@ -27,6 +29,8 @@ public class Chamber {
         if (!this.isAvailable()) {
             this.patient = patient;
             this.isAvailable = false;
+            SQLDB sql = SQLDB.getInstance();
+            sql.query(String.format("UPDATE CHAMBERS ...%d..%s.%b", id, patient.getFirstName().concat(patient.getLastName()), isAvailable));
             return true;
         }
         return false;
@@ -36,6 +40,8 @@ public class Chamber {
         if (this.isAvailable()) {
             this.isAvailable = true;
             this.patient.setStatus(new Treated());
+            SQLDB sql = SQLDB.getInstance();
+            sql.query(String.format("UPDATE CHAMBERS ...%b", isAvailable));
             return this.patient;
         } else {
             System.out.println("This chamber is already free!");
@@ -49,6 +55,8 @@ public class Chamber {
 
     public void seDepartment(Department department) {
         this.department = department;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("UPDATE CHAMBERS ...%s", department.getName()));
     }
 
     public String getRoomNumber() {
@@ -57,6 +65,8 @@ public class Chamber {
 
     public void setRoomNumber(String roomNumber) {
         this.roomNumber = roomNumber;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("UPDATE CHAMBERS ...%s", roomNumber));
     }
 
     public Patient getPatient() {
@@ -65,5 +75,7 @@ public class Chamber {
 
     private void setPatient(Patient patient) {
         this.patient = patient;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("UPDATE CHAMBERS ...%s", patient.getFirstName().concat(patient.getLastName())));
     }
 }

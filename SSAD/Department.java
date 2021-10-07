@@ -3,7 +3,7 @@ package SSAD;
 import java.util.ArrayList;
 
 
-public class Department {
+public abstract class Department {
     private String name;
     private String specialization;
     private ArrayList<Chamber> chambers;
@@ -14,6 +14,8 @@ public class Department {
         this.specialization = specialization;
         chambers = new ArrayList<Chamber>();
         doctors = new ArrayList<Doctor>();
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("INSERT DEPARTMENTS ...%s..%s...", name, specialization));
     }
 
     public String getName() {
@@ -22,6 +24,8 @@ public class Department {
 
     public void setName(String name) {
         this.name = name;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("UPDATE DEPARTMENTS ...%s...", name));
     }
 
     public String getSpecialization() {
@@ -30,6 +34,8 @@ public class Department {
 
     private void setSpecialization(String specialization) {
         this.specialization = specialization;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("UPDATE DEPARTMENTS ...%s...", specialization));
     }
 
     public ArrayList<Chamber> getAvailableChambers() {

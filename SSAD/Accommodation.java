@@ -12,6 +12,8 @@ public class Accommodation {
     public Accommodation(Date arrivalTime, Administrator administrator) {
         this.arrivalTime = arrivalTime;
         this.acceptedBy = administrator;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("INSERT ACCOMMODATIONS ...%d..%s.", arrivalTime.getTime(), administrator.getFirstName()));
     }
 
     public Date getArrivalTime() {
@@ -20,6 +22,8 @@ public class Accommodation {
 
     public void setArrivalTime(Date arrivalTime) {
         this.arrivalTime = arrivalTime;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("UPDATE ACCOMMODATIONS ...%d...", arrivalTime.getTime()));
     }
 
     public Date getDischargeTime() {
@@ -28,6 +32,8 @@ public class Accommodation {
 
     public void setDischargeTime(Date dischargeTime) {
         this.dischargeTime = dischargeTime;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("UPDATE ACCOMMODATIONS ...%d...", arrivalTime.getTime()));
     }
 
     public boolean isFinished() {
@@ -38,6 +44,8 @@ public class Accommodation {
         this.isFinished = true;
         this.dischargeTime = new Date();
         chamber.free();
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("UPDATE ACCOMMODATIONS ...%b..%d..", isFinished, dischargeTime.getTime()));
     }
 
     public Chamber getChamber() {
@@ -46,6 +54,8 @@ public class Accommodation {
 
     public void setChamber(Chamber chamber) {
         this.chamber = chamber;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("UPDATE ACCOMMODATIONS ...%d..", chamber.getId()));
     }
 
     public Administrator acceptedBy() {
@@ -54,5 +64,7 @@ public class Accommodation {
 
     private void setAcceptedBy(Administrator acceptedBy) {
         this.acceptedBy = acceptedBy;
+        SQLDB sql = SQLDB.getInstance();
+        sql.query(String.format("UPDATE ACCOMMODATIONS ...%s..", acceptedBy.getFirstName().concat(acceptedBy.getLastName())));
     }
 }
