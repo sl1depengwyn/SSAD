@@ -1,4 +1,4 @@
-package SSAD;
+package HospitalManagementSystem.Stasuses;
 
 public class Treated implements Status {
     private String status = "Treated";

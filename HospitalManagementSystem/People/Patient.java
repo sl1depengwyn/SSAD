@@ -1,4 +1,9 @@
-package SSAD;
+package HospitalManagementSystem.People;
+
+import HospitalManagementSystem.Health.HealthRecords;
+import HospitalManagementSystem.PatientDistribution.Accommodation;
+import HospitalManagementSystem.Stasuses.Status;
+import HospitalManagementSystem.Stasuses.Waiting;
 
 public class Patient extends Person {
     private String medicalInsurance;

@@ -1,4 +1,11 @@
-package SSAD;
+package HospitalManagementSystem.People;
+
+import HospitalManagementSystem.Departments.Department;
+import HospitalManagementSystem.PatientDistribution.Accommodation;
+import HospitalManagementSystem.PatientDistribution.Chamber;
+import HospitalManagementSystem.Stasuses.Treated;
+import HospitalManagementSystem.Stasuses.Treating;
+import HospitalManagementSystem.Stasuses.Waiting;
 
 import java.util.ArrayList;
 import java.util.Date;

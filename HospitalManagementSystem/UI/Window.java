@@ -1,4 +1,4 @@
-package SSAD;
+package HospitalManagementSystem.UI;
 
 import java.util.ArrayList;
 // import something.GUILibrary

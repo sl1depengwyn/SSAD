@@ -1,9 +1,9 @@
-package SSAD;
+package HospitalManagementSystem;
 
 public class Config {
     static String pathToDB = "home/hms/db/db.sql";
 
-    static String getPathToDB() {
+    public static String getPathToDB() {
         return pathToDB;
     }
 }

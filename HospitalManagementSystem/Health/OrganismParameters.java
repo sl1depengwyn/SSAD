@@ -1,4 +1,4 @@
-package SSAD;
+package HospitalManagementSystem.Health;
 
 public class OrganismParameters {
     private String bloodType;
@@ -27,6 +27,6 @@ public class OrganismParameters {
     }
 
     public void addRecord(int healthRecord) {
-        this.normalHeartRate = normalHeartRate;
+        this.normalHeartRate = healthRecord;
     }
 }

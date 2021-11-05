@@ -1,6 +1,7 @@
-package SSAD;
+package HospitalManagementSystem.Health;
 
-import java.util.ArrayList;
+import HospitalManagementSystem.Common.SQLDB;
+import HospitalManagementSystem.People.Doctor.Doctor;
 
 public class HealthRecord {
     private String diagnosis;

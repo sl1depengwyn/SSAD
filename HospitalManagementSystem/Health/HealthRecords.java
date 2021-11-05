@@ -1,4 +1,4 @@
-package SSAD;
+package HospitalManagementSystem.Health;
 
 import java.util.ArrayList;
 

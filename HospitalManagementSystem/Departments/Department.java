@@ -1,4 +1,8 @@
-package SSAD;
+package HospitalManagementSystem.Departments;
+
+import HospitalManagementSystem.Common.SQLDB;
+import HospitalManagementSystem.PatientDistribution.Chamber;
+import HospitalManagementSystem.People.Doctor.Doctor;
 
 import java.util.ArrayList;
 

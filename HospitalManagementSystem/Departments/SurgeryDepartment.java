@@ -1,4 +1,4 @@
-package SSAD;
+package HospitalManagementSystem.Departments;
 
 
 public class SurgeryDepartment extends Department {

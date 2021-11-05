@@ -1,4 +1,4 @@
-package SSAD;
+package HospitalManagementSystem.Stasuses;
 
 public class Waiting implements Status {
     private String status = "Waiting";

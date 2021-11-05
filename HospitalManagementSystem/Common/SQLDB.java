@@ -1,6 +1,8 @@
-package SSAD;
+package HospitalManagementSystem.Common;
 
 // import something.SQLLibrary
+
+import HospitalManagementSystem.Config;
 
 public class SQLDB {
     private String path;

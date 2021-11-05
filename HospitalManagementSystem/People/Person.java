@@ -1,4 +1,7 @@
-package SSAD;
+package HospitalManagementSystem.People;
+
+import HospitalManagementSystem.Common.Address;
+import HospitalManagementSystem.Common.SQLDB;
 
 import java.util.Date;
 
@@ -8,7 +11,7 @@ enum Gender {
     male
 }
 
-abstract class Person {
+public abstract class Person {
 
     private String firstName;
     private String lastName;

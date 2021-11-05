@@ -1,4 +1,4 @@
-package SSAD;
+package HospitalManagementSystem.Common;
 
 public class Address {
     private String street;

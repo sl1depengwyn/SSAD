@@ -1,4 +1,7 @@
-package SSAD;
+package HospitalManagementSystem.PatientDistribution;
+
+import HospitalManagementSystem.Common.SQLDB;
+import HospitalManagementSystem.People.Administrator;
 
 import java.util.Date;
 

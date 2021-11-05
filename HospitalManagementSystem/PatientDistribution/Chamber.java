@@ -1,6 +1,9 @@
-package SSAD;
+package HospitalManagementSystem.PatientDistribution;
 
-import java.util.Date;
+import HospitalManagementSystem.Common.SQLDB;
+import HospitalManagementSystem.Departments.Department;
+import HospitalManagementSystem.People.Patient;
+import HospitalManagementSystem.Stasuses.Treated;
 
 public class Chamber {
     private int id;
